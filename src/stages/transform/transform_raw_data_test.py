@@ -17,6 +17,6 @@ def test_transform_error():
     transform_raw_data = TransformRawData()
 
     try:
-        transform_raw_data.transform('Entrada Com Erro')
+        transform_raw_data.transform('Data error')
     except Exception as exception: # pylint: disable=broad-except
         assert isinstance(exception, TransformError)
