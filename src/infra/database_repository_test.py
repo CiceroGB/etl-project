@@ -4,7 +4,7 @@ from .database_connector import DatabaseConnection
 from .database_repository import DatabaseRepository
 
 
-@pytest.mark.skip(reason="No need to inser data in database")
+@pytest.mark.skip(reason="No need to insert data in database")
 def test_insert_artist():
     DatabaseConnection.connect()
 
