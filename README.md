@@ -12,7 +12,7 @@
 
 
 ## About project
-<strong>Extract:</strong> Extract artist's data from https://web.archive.org/web/20121007172955/https://www.nga.gov/collection/anZ1.htm<br>
+<strong>Extract:</strong> Extract data from https://web.archive.org/<br>
 <strong>Transform:</strong> Transformation of html data.<br>
 <strong>Load:</strong> Relational database MySQL has been used to load the data.
 <div align="center">
