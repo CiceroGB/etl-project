@@ -1,4 +1,4 @@
-version: "3.7"
+version: "3.8"
 
 services:
   database:
@@ -14,5 +14,5 @@ services:
       - 3306:3306
     volumes:
       - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
-
+  
 
