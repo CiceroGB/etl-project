@@ -26,7 +26,10 @@ Docker<br>
 
 ## How to build and run
 
-1. Databse
+1. Up docker image:
 
-    ```docker-compose up -d   ```
+    ```docker-compose up --build -d      ```
   
+2. Run script:
+
+    ```docker exec etl_run python run.py        ```
