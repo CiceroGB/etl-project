@@ -7,7 +7,7 @@ class DatabaseConnection:
     @classmethod
     def connect(cls):
         db_connection = mysql.connect(
-            host = "localhost",
+            host = "database",
             port = 3306,
             database = "etl",
             user = "root",
