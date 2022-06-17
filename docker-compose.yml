@@ -1,8 +1,9 @@
-version: "3.8"
+version: "3"
 
 services:
   database:
-    image: mysql:latest
+    platform: linux/x86_64
+    image: mysql:5.7
     restart: always
 
     environment:
@@ -14,5 +15,20 @@ services:
       - 3306:3306
     volumes:
       - ./sql/create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - sde_network
   
+  loader:
+    image: etl_run
+    container_name: etl_run
+    build:
+      context: ./containers/loader/
+    volumes:
+      - ./:/opt/sde
+    networks:
+      - sde_network
 
+
+networks:
+  sde_network:
+    driver: bridge
